@@ -36,7 +36,9 @@ class Post {
 
         // prepare the statement 
         $stmt = $this->conn->prepare($query);
-        
+        //execute query
+        $stmt->execute();
+        return $stmt;
     }
 }
 ?>
