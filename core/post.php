@@ -33,6 +33,10 @@ class Post {
         LEFT JOIN
         categories c ON p.category_id = c.id
         ORDER BY p.created_at';
+
+        // prepare the statement 
+        $stmt = $this->conn->prepare($query);
+        
     }
 }
 ?>
