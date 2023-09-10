@@ -27,6 +27,8 @@ if($num > 0){
         );
         array_push($post_arr['data'], $post_item);
     }
+    // convert to json and output
+    echo json_encode($post_arr);
 }
 else{
 
