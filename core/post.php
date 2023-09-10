@@ -2,7 +2,7 @@
 
 class Post {
     // Database stuff
-    private $connect;
+    private $conn;
     private $table = 'posts';
 
     //post properties
@@ -13,5 +13,12 @@ class Post {
     public $body;
     public $author;
     public $create_date;
+
+    // constructor with DB connection
+    public function __construct($connect){
+        $this->conn = $connect;
+    }
+
+    public function read()
 }
 ?>
